@@ -1,0 +1,1063 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One');
+
+img {
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	margin     : 0px;
+	padding    : 0px;
+	box-sizing : border-box;
+	outline    : none;
+}
+
+body {
+	background-color: white;
+}
+
+	body > button {
+		display         : none;
+		width           : 40px;
+		height          : 40px;
+		position        : fixed;
+		top             : 20px;
+		left            : 20px;
+		border          : none;
+		background-color: #994c00;
+		padding         : 5px;
+		z-index         : 110;
+	}
+
+		body > button > span {
+			display         : block;
+			width           : 100%;
+			height          : 1px;
+			margin-bottom   : 5px;
+			background-color: white;
+			transition      : all 0.3s ease-out;
+		}
+
+		body > button > span:last-of-type {
+			margin-bottom: 0px;
+		}
+
+	body > .active-btn {
+		display        : flex !important;
+		align-items    : center;
+		justify-content: center;
+		padding        : 0px !important;
+	}
+
+		body > .active-btn > span {
+			position: absolute;
+		}
+
+		body > .active-btn > span:first-of-type {
+			transform: rotate(45deg);
+		}
+
+		body > .active-btn > span:nth-of-type(2) {
+			opacity: 0;
+		}
+
+		body > .active-btn > span:last-of-type {
+			transform: rotate(-45deg);
+		}
+
+	body > nav {
+		width           : 100%;
+		height          : 80px;
+		background-color: rgba(255, 255, 255, 0.75);
+		padding         : 0px 120px;
+		position        : fixed;
+		top             : 0px;
+		left            : 0px;
+		display         : flex;
+		align-items     : center;
+		flex-flow       : row wrap;
+		justify-content : space-between;
+		transition      : all 0.3s ease-out;
+		z-index         : 100;
+	}
+
+	body > .nav-white {
+		background-color: white;
+		box-shadow      : 0 0 3px rgba(0, 0, 0, 0.75);
+	}
+
+	body > .active-nav {
+		margin-top: 0px;
+	}
+
+		body > nav > a {
+			display: inline-block;
+			height : 60px;
+			width  : auto;
+		}
+
+			body > nav > a > img {
+				height: 100%;
+			}
+
+		body > nav > ul {
+			list-style     : none;
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+		}
+
+			body > nav > ul > li {
+				display     : inline-block;
+				margin-right: 15px;
+			}
+
+			body > nav > ul > li:last-of-type {
+				margin-right: 0px;
+			}
+
+				body > nav > ul > li > a {
+					display       : inline-block;
+					color         : #994c00;
+					font-weight   : 400;
+					text-transform: uppercase;
+					transition    : all 0.3s ease-out;
+				}
+
+				body > nav > ul > li > a:hover {
+					color: #6d1100;
+				}
+
+			body > nav > ul > li:nth-of-type(6) {
+				margin-right: 10px;
+			}
+
+			body > nav > ul > li:nth-of-type(6),
+			body > nav > ul > li:nth-of-type(7) {
+				font-size: 1.5em;
+			}
+
+		body > nav > span {
+			display         : flex;
+			align-items     : center;
+			justify-content : center;
+			width           : 100%;
+			height          : 30px;
+			background-color: #6d1100;
+			font-weight     : 300;
+			position        : absolute;
+			bottom          : -30px;
+			left            : 0px;
+		}
+
+			body > nav > span > a {
+				display       : inline-block;
+				color         : white;
+				font-weight   : 300;
+				text-transform: uppercase;
+				font-size     : 0.75em;
+			}
+
+			body > nav > span > a:last-of-type {
+				position: absolute;
+				right   : 120px;
+			}
+
+	body > header {
+		width      : 100%;
+		height     : 100vh;
+		display    : flex;
+		align-items: center;
+		position   : relative;
+	}
+
+		body > header > form {
+			width           : 30%;
+			border-radius   : 10px;
+			background-color: #ececec;
+			padding         : 20px;
+			position        : absolute;
+			right           : 120px;
+		}
+
+			body > header > form > div {
+				width        : 100%;
+				margin-bottom: 15px;
+			}
+
+			body > header > form > div:last-of-type {
+				margin-bottom: 0px;
+			}
+
+				body > header > form > div > label {
+					display      : block;
+					width        : 100%;
+					margin-bottom: 5px;
+					color        : black;
+					font-weight  : 700;
+					font-size    : 0.75em;
+				}
+
+				body > header > form > div > input,
+				body > header > form > div > select {
+					width           : 100%;
+					background-color: #e5e5e5;
+					border          : none;
+					padding         : 10px;
+					color           : black
+					border-radius   : 15px;
+					margin-bottom   : 10px;
+					font-weight     : 300;
+					color           : black;
+				}
+
+				body > header > form > div > select:last-of-type {
+					margin-bottom: 0px;
+				}
+
+				body > header > form > div > button {
+					display         : block;
+					width           : 100%;
+					font-weight     : 300;
+					color           : white;
+					border-radius   : 5px;
+					border          : none;
+					background-color: #994c00;
+					text-align      : center;
+					padding         : 10px;
+					text-transform  : uppercase;
+					font-size       : 0.85em;
+					transition      : all 0.3s ease-out;
+				}
+
+				body > header > form > div > button:hover {
+					background-color: #6d1100;
+				}
+
+#nosotros {
+	width  : 100%;
+	padding: 80px 120px;
+}
+
+	#nosotros > h1 {
+		font-family    : 'Yeseva One', cursive;
+		font-size      : 2em;
+		color          : white;
+		margin-bottom  : 40px;
+		text-align     : center;
+		position       : relative;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+	}
+
+	#nosotros > h1:before {
+		content         : '';
+		height          : 3px;
+		width           : 150px;
+		background-color: #994c00;
+		position        : absolute;
+		bottom          : -10px;
+	}
+
+	#nosotros > div {
+		width          : 100%;
+		display        : flex;
+		flex-flow      : row wrap;
+		justify-content: space-between;
+		align-items    : center;
+	}
+
+		#nosotros > div > img {
+			width: calc(50% - 20px);
+		}
+
+		#nosotros > div > div {
+			width: calc(50% - 20px);
+		}
+
+			#nosotros > div > div > p {
+				color        : white;
+				font-weight  : 400;
+				text-align   : justify;
+				margin-bottom: 20px;
+			}
+
+			#nosotros > div > div > a {
+				display    : inline-block;
+				color      : white;
+				padding    : 10px;
+				font-size  : 0.85em;
+				font-weight: 400;
+				border     : 1px solid white;
+			}
+
+				#nosotros > div > div > a > i {
+					font-size  : 1.5em;
+					margin-left: 10px;
+				}
+
+#descanso-1 {
+	width           : 100%;
+	display         : flex;
+	flex-flow       : row wrap;
+	justify-content : space-between;
+	align-items     : center;
+	position        : relative;
+	background-color: #e5e5e5;
+}
+
+	#descanso-1 > div {
+		width          : 50%;
+		padding        : 80px 80px 80px 120px;
+		display        : flex;
+		align-items    : center;
+		justify-content: flex-end;
+		flex-direction : column;
+		position       : relative;
+	}
+
+	#descanso-1 > div:before {
+		content         : '';
+		height          : 2px;
+		width           : 75%;
+		position        : absolute;
+		background-color: #994c00;
+		top             : 40px;
+		left            : 0px;
+	}
+
+		#descanso-1 > div > h2 {
+			font-family  : 'Yeseva One', cursive;
+			white-space  : pre-line;
+			display      : block;
+			width        : 100%;
+			font-size    : 3em;
+			line-height  : 1em;
+			color        : #6d1100;
+			margin-bottom: 20px;
+			margin-left  : 40px;
+		}
+
+			#descanso-1 > div > h2 > strong {
+				font-family: 'Yeseva One', cursive;
+				font-size  : 1.25em;
+				display: inline-block;
+				margin-left: -20px;
+			}
+
+			#descanso-1 > div > h2 > small {
+				font-family: 'Yeseva One', cursive;
+				font-size  : 0.65em;
+			}
+
+		#descanso-1 > div > a {
+			display    : inline-block;
+			padding    : 10px 20px;
+			border     : 2px solid #6d1100;
+			color      : #6d1100;
+			font-weight: 400;
+		}
+
+	#descanso-1 > img {
+		width: 50%;
+	}
+
+#servicios {
+	width           : 100%;
+	background-color: white;
+	padding         : 80px 120px;
+}
+
+	#servicios > h1 {
+		font-family   : 'Yeseva One', cursive;
+		font-size     : 1.5em;
+		display       : block;
+		width         : 100%;
+		color         : #6d1100;
+		text-align    : center;
+		padding-bottom: 20px;
+		margin-bottom : 20px;
+		border-bottom : 1px solid #6d1100;
+	}
+
+	#servicios > sub {
+		display      : block;
+		width        : 100%;
+		font-weight  : 400;
+		color        : black;
+		text-align   : center;
+		margin-bottom: 80px;
+	}
+
+	#servicios > div {
+		width          : 100%;
+		display        : flex;
+		flex-flow      : row wrap;
+		justify-content: space-between;
+		align-items    : flex-end;
+	}
+
+		#servicios > div > figure {
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+			flex-direction : column;
+			width          : calc(16.6% - 10px);
+		}
+
+			#servicios > div > figure > a {
+				width           : 35%;
+				display         : inline-block;
+				border-radius   : 50%;
+				margin-bottom   : 10px;
+				background-color: #9e550d;
+				transition      : all 0.3s ease-out;
+			}
+
+			#servicios > div > figure > a:hover {
+				background-color: #6d1100;
+			}
+
+				#servicios > div > figure > a > img {
+					width: 100%;
+				}
+
+			#servicios > div > figure > figcaption {
+				text-align    : center;
+				font-size     : 1.1em;
+				text-transform: uppercase;
+				font-weight   : 400;
+				margin-bottom : 10px;
+			}
+
+			#servicios > div > figure > p {
+				text-align : center;
+				font-weight: 300;
+			}
+
+		#servicios > div > figure:nth-of-type(3) {
+			width: calc(30% - 10px);
+		}
+
+			#servicios > div > figure:nth-of-type(3) > img {
+				width: 100%;
+			}
+
+#desarrollos {
+	width  : 100%;
+	padding: 80px 120px;
+}
+
+	#desarrollos > h1 {
+		font-family  : 'Yeseva One', cursive;
+		color        : white;
+		font-size    : 1.5em;
+		text-align   : center;
+		margin-bottom: 40px;
+	}
+
+	#desarrollos > ul {
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+		list-style     : none;
+		margin-bottom  : 40px;
+	}
+
+		#desarrollos > ul > li {
+			margin-right: 15px;
+		}
+
+		#desarrollos > ul > li:last-of-type {
+			margin-right: 0px;
+		}
+
+			#desarrollos > ul > li > a {
+				display       : inline-block;
+				color         : white;
+				padding       : 5px 10px;
+				transition    : all 0.3s ease-out;
+				font-size     : 0.75em;
+				font-weight   : 300;
+				text-transform: uppercase;
+				border-radius : 5px;
+			}
+
+			#desarrollos > ul > li > a:hover {
+				transform       : scale(1.1);
+				background-color: #6d1100;
+			}
+
+			#desarrollos > ul > li > .active {
+				transform       : scale(1.1);
+				background-color: #6d1100;
+			}
+
+#faq {
+	width  : 100%;
+	padding: 80px 120px;
+}
+
+	#faq > h1 {
+		font-family   : 'Yeseva One', cursive;
+		font-size     : 1.5em;
+		display       : block;
+		width         : 100%;
+		color         : #6d1100;
+		text-align    : center;
+		padding-bottom: 20px;
+		margin-bottom : 60px;
+		border-bottom : 1px solid #6d1100;
+	}
+
+	#faq > div {
+		width          : 100%;
+		display        : flex;
+		justify-content: space-between;
+		flex-flow      : row wrap;
+	}
+
+		#faq > div > ul {
+			width     : calc(50% - 10px);
+			list-style: none;
+		}
+
+			#faq > div > ul > li {
+				display      : block;
+				width        : 100%;
+				margin-bottom: 20px;
+			}
+
+			#faq > div > ul > li:last-of-type {
+				margin-bottom: 0px;
+			}
+
+				#faq > div > ul > li > a {
+					width           : 100%;
+					height          : 40px;
+					display         : flex;
+					align-items     : center;
+					justify-content : flex-start;
+					background-color: black;
+					color           : white;
+					padding-left    : 20px;
+					position        : relative;
+					font-weight     : 300;
+					transition      : all 0.3s ease-out;
+				}
+
+				#faq > div > ul > li > .active {
+					background-color: #6d1100;
+				}
+
+					#faq > div > ul > li > a > i {
+						position  : absolute;
+						right     : 20px;
+						font-size : 0.75em;
+						transition: all 0.3s ease-out;
+					}
+
+					#faq > div > ul > li > a > .i-rotate {
+						transform: rotate(180deg);
+					}
+
+				#faq > div > ul > li > div {
+					display    : none;
+					font-weight: 300;
+					padding-top: 10px;
+					text-align : justify;
+				}
+
+	body > map {
+		display: block;
+		width  : 100%;
+		height : 350px;
+	}
+
+#contacto {
+	width  : 100%;
+	padding: 80px 120px;
+}
+
+	#contacto > h1 {
+		font-family: 'Yeseva One', cursive;
+		color      : black;
+		display    : block;
+		width      : 100%;
+		text-align : center;
+		font-size  : 2em;
+	}
+
+	#contacto > sub {
+		font-family  : 'Yeseva One', cursive;
+		color        : black;
+		display      : block;
+		width        : 100%;
+		text-align   : center;
+		font-size    : 1.5em;
+		margin-bottom: 40px;
+	}
+
+	#contacto > div {
+		width          : 75%;
+		margin         : auto;
+		display        : flex;
+		flex-flow      : row wrap;
+		justify-content: space-between;
+	}
+
+		#contacto > div > ul {
+			list-style: none;
+			width     : calc(50% - 20px);
+		}
+
+			#contacto > div > ul > span {
+				font-family  : 'Yeseva One', cursive;
+				display      : block;
+				width        : 100%;
+				text-align   : center;
+				margin-bottom: 15px;
+				font-size    : 1.5em;
+			}
+
+			#contacto > div > ul > li {
+				display      : block;
+				text-align   : center;
+				width        : 100%;
+				margin-bottom: 10px;
+				font-weight  : 300;
+			}
+
+			#contacto > div > ul > li:last-of-type {
+				margin-bottom: 0px;
+			}
+
+				#contacto > div > ul > li > a {
+					display    : inline-block;
+					color      : black;
+					font-weight: 700;
+				}
+
+			#contacto > div > ul > div {
+				width          : 100%;
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+				padding-top    : 20px;
+				margin-top     : 40px;
+				border-top     : 1px solid #6d1100;
+			}
+
+				#contacto > div > ul > div > a {
+					display  : inline-block;
+					font-size: 2em;
+					color    : #994c00;
+				}
+
+				#contacto > div > ul > div > a:last-of-type {
+					margin-left: 20px;
+				}
+
+		#contacto > div > form {
+			width: calc(50% - 20px);
+		}
+
+			#contacto > div > form > input,
+			#contacto > div > form > textarea {
+				width        : 100%;
+				margin-bottom: 10px;
+				padding      : 10px;
+				border-radius: 5px;
+				border       : 1px solid #b9b9b9;
+				font-size    : 0.85em;
+			}
+
+			#contacto > div > form > button {
+				width           : 100%;
+				padding         : 10px;
+				color           : white;
+				font-weight     : 300;
+				font-size       : 0.85em;
+				background-color: #994c00;
+				transition      : all 0.3s ease-out;
+				border          : none;
+				border-radius   : 5px;
+			}
+
+			#contacto > div > form > button:hover {
+				background-color: #6d1100;
+			}
+
+	body > footer {
+		width              : 100%;
+		background-size    : cover;
+		background-position: center;
+	}
+
+		body > footer > img {
+			width  : 150px;
+			margin : auto;
+			padding: 40px 0px;
+		}
+
+		body > footer > span {
+			display    : block;
+			width      : 100%;
+			padding    : 15px;
+			text-align : center;
+			font-weight: 300;
+			border-top : 1px solid white;
+			color      : white;
+			font-size  : 15px;
+		}
+
+@media screen and (max-width: 1440px) {
+	body > nav {
+		padding: 0px 80px;
+	}
+
+		body > nav > span > a:last-of-type {
+			right: 80px;
+		}
+
+	body > header > form {
+		right: 80px;
+	}
+
+	#nosotros {
+		padding: 80px;
+	}
+
+	#descanso-1 > div {
+		padding: 80px;
+	}
+
+	#servicios {
+		padding: 80px;
+	}
+
+	#desarrollos {
+		padding: 80px;
+	}
+
+	#faq {
+		padding: 80px;
+	}
+}
+
+@media all and (orientation: landscape) and (max-width: 1370px) {
+	body > button {
+		display: block;
+	}
+
+	body > nav {
+		width           : 100%;
+		height          : 100vh;
+		background-color: white;
+		padding         : 0px;
+		flex-flow       : row nowrap;
+		justify-content : center;
+		flex-direction  : column;
+		display         : flex;
+		margin-top      : -100vh;
+	}
+
+		body > nav > ul {
+			flex-direction: column;
+		}
+
+			body > nav > ul > li {
+				margin-right : 0px;
+				margin-bottom: 10px;
+			}
+
+			body > nav > ul > li:last-of-type {
+				margin-bottom: 0px;
+			}
+
+		body > nav > a {
+			margin-bottom: 40px;
+			height       : 120px;
+		}
+
+		body > nav > span {
+			bottom: 0px;
+		}
+
+	body > header {
+		justify-content: center;
+	}
+
+		body > header > form {
+			position: static;
+			width   : 50%;
+		}
+
+	#descanso-1 > div {
+		width: 100%;
+	}
+
+		#descanso-1 > div > h2 {
+			text-align: center;
+		}
+
+	#descanso-1 > img {
+		display: none;
+	}
+
+	#servicios > sub {
+		margin-bottom: 40px;
+	}
+
+		#servicios > div > figure {
+			width: 20%;
+		}
+
+		#servicios > div > figure:nth-of-type(3) {
+			display: none;
+		}
+
+	#contacto {
+		padding: 80px;
+	}
+
+		#contacto > div {
+			width: 100%;
+		}
+}
+
+@media all and (orientation: landscape) and (max-width: 740px) {
+	body > nav > a {
+		height       : 50px;
+		margin-bottom: 10px;
+	}
+
+		body > nav > ul > li {
+			margin-bottom: 5px;
+		}
+
+	body > button {
+		left: 20px;
+		top : 20px;
+	}
+
+	body > header {
+		height : auto;
+		padding: 80px;
+	}
+
+		body > header > form {
+			width: 100%;
+		}
+
+	#nosotros > div > img {
+		display: none;
+	}
+
+	#nosotros > div > div {
+		width: 100%;
+	}
+}
+
+@media all and (orientation: portrait) and (max-width: 1030px) {
+	body > button {
+		display: block;
+		left   : 20px;
+		top    : 20px;
+	}
+
+	body > nav {
+		width           : 100%;
+		height          : 100vh;
+		background-color: white;
+		padding         : 0px;
+		flex-flow       : row nowrap;
+		justify-content : center;
+		flex-direction  : column;
+		display         : flex;
+		margin-top      : -100vh;
+	}
+
+		body > nav > ul {
+			flex-direction: column;
+		}
+
+			body > nav > ul > li {
+				margin-right : 0px;
+				margin-bottom: 10px;
+			}
+
+			body > nav > ul > li:last-of-type {
+				margin-bottom: 0px;
+			}
+
+		body > nav > a {
+			margin-bottom: 40px;
+			height       : 120px;
+		}
+
+		body > nav > span {
+			bottom: 0px;
+		}
+
+	body > header {
+		padding        : 120px;
+		justify-content: center;
+	}
+
+		body > header > form {
+			position: static;
+			width   : 75%;
+		}
+
+	#descanso-1 > img {
+		display: none;
+	}
+
+	#descanso-1 > div {
+		width: 100%;
+	}
+
+		#descanso-1 > div > h2 {
+			width     : 100%;
+			text-align: center;
+		}
+
+	#servicios > div > figure {
+		width: 20%;
+	}
+
+	#servicios > div > figure:nth-of-type(3) {
+		display: none;
+	}
+
+	#contacto {
+		padding: 80px;
+	}
+
+		#contacto > div {
+			width: 100%;
+		}
+}
+
+@media all and (orientation: portrait) and (max-width: 770px) {
+	body > header {
+		padding: 80px;
+	}
+
+		body > header > form {
+			width: 100%;
+		}
+
+	#nosotros > div > div {
+		width: 100%;
+	}
+
+	#nosotros > div > img {
+		display: none;
+	}
+
+	#descanso-1 > div > h2 {
+		margin       : 0px;
+		margin-bottom: 20px;
+	}
+
+	#servicios > sub {
+		margin-bottom: 20px;
+	}
+}
+
+@media all and (orientation: portrait) and (max-width: 420px) {
+	body > header {
+		padding: 20px;
+	}
+
+	#nosotros {
+		padding: 80px 20px;
+	}
+
+	#descanso-1 > div {
+		padding: 80px 20px;
+	}
+
+		#descanso-1 > div > h2 {
+			font-size: 2em;
+		}
+
+	#servicios {
+		padding: 80px 20px;
+	}
+
+		#servicios > sub {
+			margin-bottom: 40px;
+		}
+
+		#servicios > div {
+			flex-flow      : row nowrap;
+			align-items    : center;
+			justify-content: center;
+			flex-direction : column;
+		}
+
+			#servicios > div > figure {
+				width        : 50%;
+				margin-bottom: 20px;
+			}
+
+			#servicios > div > figure:last-of-type {
+				margin-bottom: 0px;
+			}
+
+	#faq {
+		padding: 80px 20px;
+	}
+
+		#faq > div {
+			flex-flow      : row nowrap;
+			justify-content: center;
+			align-items    : center;
+			flex-direction : column;
+		}
+
+			#faq > div > ul {
+				width: 100%;
+			}
+
+			#faq > div > ul:first-of-type {
+				margin-bottom: 20px;
+			}
+
+	body > map {
+		height: 250px;
+	}
+
+	#contacto {
+		padding: 80px 20px;
+	}
+
+		#contacto > div {
+			flex-flow      : row nowrap;
+			justify-content: center;
+			align-items    : center;
+			flex-direction : column;
+		}
+
+			#contacto > div > ul {
+				width        : 100%;
+				margin-bottom: 20px;
+			}
+
+			#contacto > div > form {
+				width: 100%;
+			}
+}
