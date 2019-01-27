@@ -25,13 +25,38 @@ body {
 	background-color: white;
 }
 
+	responsive-nav {
+		display         : none;
+		flex-flow       : row wrap;
+		justify-content : flex-end;
+		align-items     : center;
+		height          : 60px;
+		width           : 100%;
+		top             : 0px;
+		left            : 0px;
+		position        : fixed;
+		background-color: white;
+		padding         : 0px 80px;
+		box-shadow      : 0 1px 1px rgba(0, 0, 0, 0.25);
+		z-index         : 100;
+	}
+
+		responsive-nav > a {
+			display: block;
+			height : 50px;
+		}
+
+			responsive-nav > a > img {
+				height: 100%;
+			}
+
 	body > button {
 		display         : none;
 		width           : 40px;
 		height          : 40px;
 		position        : fixed;
-		top             : 20px;
-		left            : 20px;
+		top             : 10px;
+		left            : 80px;
 		border          : none;
 		background-color: #994c00;
 		padding         : 5px;
@@ -138,11 +163,6 @@ body {
 				}
 
 			body > nav > ul > li:nth-of-type(6) {
-				margin-right: 10px;
-			}
-
-			body > nav > ul > li:nth-of-type(6),
-			body > nav > ul > li:nth-of-type(7) {
 				font-size: 1.5em;
 			}
 
@@ -172,33 +192,71 @@ body {
 				right   : 120px;
 			}
 
-	body > header {
-		width      : 100%;
-		height     : 100vh;
-		display    : flex;
-		align-items: center;
-		position   : relative;
+#formulario {
+	width   : 100%;
+	height  : 100vh;
+	display : none;
+	position: fixed;
+	top     : 0px;
+	left    : 0px;
+	z-index : 500;
+}
+
+	#formulario > a {
+		position       : absolute;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+		width          : 30px;
+		height         : 30px;
+		top            : 20px;
+		right          : 20px;
+		z-index        : 200;
 	}
 
-		body > header > form {
+		#formulario > a > span {
+			display         : block;
+			width           : 100%;
+			height          : 1px;
+			background-color: white;
+			position        : absolute;
+		}
+
+		#formulario > a > span:first-of-type {
+			transform: rotate(45deg);
+		}
+
+		#formulario > a > span:last-of-type {
+			transform: rotate(-45deg);
+		}
+
+	#formulario > div {
+		width           : 100%;
+		height          : 100%;
+		position        : absolute;
+		background-color: rgba(0, 0, 0, 0.85);
+		display         : flex;
+		align-items     : center;
+		justify-content : center;
+	}
+
+		#formulario > div > form {
 			width           : 30%;
 			border-radius   : 10px;
 			background-color: #ececec;
 			padding         : 20px;
-			position        : absolute;
-			right           : 120px;
 		}
 
-			body > header > form > div {
+			#formulario > div > form > div {
 				width        : 100%;
 				margin-bottom: 15px;
 			}
 
-			body > header > form > div:last-of-type {
+			#formulario > div > form > div:last-of-type {
 				margin-bottom: 0px;
 			}
 
-				body > header > form > div > label {
+				#formulario > div > form > div > label {
 					display      : block;
 					width        : 100%;
 					margin-bottom: 5px;
@@ -207,8 +265,8 @@ body {
 					font-size    : 0.75em;
 				}
 
-				body > header > form > div > input,
-				body > header > form > div > select {
+				#formulario > div > form > div > input,
+				#formulario > div > form > div > select {
 					width           : 100%;
 					background-color: #e5e5e5;
 					border          : none;
@@ -220,11 +278,11 @@ body {
 					color           : black;
 				}
 
-				body > header > form > div > select:last-of-type {
+				#formulario > div > form > div > select:last-of-type {
 					margin-bottom: 0px;
 				}
 
-				body > header > form > div > button {
+				#formulario > div > form > div > button {
 					display         : block;
 					width           : 100%;
 					font-weight     : 300;
@@ -239,9 +297,21 @@ body {
 					transition      : all 0.3s ease-out;
 				}
 
-				body > header > form > div > button:hover {
+				#formulario > div > form > div > button:hover {
 					background-color: #6d1100;
 				}
+
+	body > header {
+		width          : 100%;
+		height         : 100vh;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+	}
+
+		body > header > img {
+			width: 300px;
+		}
 
 #nosotros {
 	width  : 100%;
@@ -503,6 +573,94 @@ body {
 				background-color: #6d1100;
 			}
 
+	#desarrollos > div {
+		width  : 100%;
+		display: none;
+	}
+
+	#desarrollos > div:first-of-type {
+		display: block;
+	}
+
+		#desarrollos > div > div {
+			width          : 100%;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+		}
+
+			#desarrollos > div > div > figure {
+				width         : calc(33.33% - 20px);
+				border-bottom : 1px solid white;
+				color         : white;
+				padding-bottom: 10px;
+			}
+
+			#desarrollos > div > div > figure:nth-of-type(n+4) {
+				margin-top: 30px;
+			}
+
+				#desarrollos > div > div > figure > a {
+					display      : block;
+					width        : 100%;
+					position     : relative;
+					margin-bottom: 10px;
+				}
+
+					#desarrollos > div > div > figure > a > span {
+						display         : inline-block;
+						padding         : 5px 10px;
+						color           : white;
+						font-family     : 'Yeseva One', cursive;
+						background-color: #faa94e;
+						position        : absolute;
+						top             : 10px;
+						right           : 10px;
+						border-radius   : 5px;
+						z-index         : 30;
+						font-size       : 0.85em;
+					}
+
+					#desarrollos > div > div > figure > a > img {
+						width   : 100%;
+						position: relative;
+						z-index : 10;
+					}
+
+					#desarrollos > div > div > figure > a > div {
+						width           : 100%;
+						height          : 100%;
+						position        : absolute;
+						background-color: rgba(0, 0, 0, 0.85);
+						z-index         : 20;
+						top             : 0px;
+						left            : 0px;
+						color           : white;
+						display         : flex;
+						align-items     : center;
+						justify-content : center;
+						font-size       : 3em;
+						transition      : all 0.3s ease-out;
+						opacity         : 0;
+					}
+
+					#desarrollos > div > div > figure > a:hover > div {
+						opacity: 1;
+					}
+
+				#desarrollos > div > div > figure > address {
+					font-weight: 300;
+					font-style : normal;
+					display    : block;
+				}
+
+				#desarrollos > div > div > figure > figcaption {
+					font-size  : 0.85em;
+					font-weight: 300;
+					font-style : italic;
+					display    : block;
+				}
+
 #faq {
 	width  : 100%;
 	padding: 80px 120px;
@@ -721,6 +879,570 @@ body {
 			font-size  : 15px;
 		}
 
+#resultados {
+	width  : 100%;
+	padding: 180px 120px 80px 120px;
+}
+
+	#resultados > h1 {
+		display      : block;
+		width        : 100%;
+		font-weight  : 400;
+		font-size    : 1.25em;
+		margin-bottom: 10px;
+	}
+
+	#resultados > div {
+		width          : 100%;
+		display        : flex;
+		align-items    : center;
+		justify-content: flex-start;
+		margin-bottom  : 60px;
+	}
+
+		#resultados > div > span {
+			display     : inline-block;
+			margin-right: 10px;
+			font-weight : 300;
+		}
+
+		#resultados > div > select {
+			padding     : 5px;
+			border      : 1px solid #b8b8b8;
+			margin-right: 10px;
+		}
+
+		#resultados > div > ul {
+			list-style     : none;
+			display        : flex;
+			align-items    : center;
+			justify-content: flex-start;
+		}
+
+			#resultados > div > ul > li {
+				margin-right: 5px;
+			}
+
+			#resultados > div > ul > li:last-of-type {
+				margin-right: 0px;
+			}
+
+				#resultados > div > ul > li > a {
+					display        : flex;
+					align-items    : center;
+					justify-content: center;
+					color          : #b8b8b8;
+					border         : 1px solid #b8b8b8;
+					width          : 25px;
+					height         : 25px;
+					font-weight    : 300;
+					font-size      : 0.85em;
+					transition     : all 0.3s ease-out;
+				}
+
+				#resultados > div > ul > li > a:hover {
+					background-color: #b8b8b8;
+					color           : rgba(0, 0, 0, 0.5);
+				}
+
+	#resultados > section {
+		width: 100%;
+	}
+
+		#resultados > section > h2 {
+			font-size    : 1.1em;
+			font-weight  : 300;
+			margin-bottom: 20px;
+		}
+
+		#resultados > section > div {
+			width          : 100%;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+		}
+
+			#resultados > section > div > property {
+				display   : block;
+				width     : calc(50% - 20px);
+				margin-top: 40px;
+			}
+
+			#resultados > section > div > property:nth-of-type(1),
+			#resultados > section > div > property:nth-of-type(2) {
+				margin-top: 0px;
+			}
+
+				#resultados > section > div > property > p-header {
+					width: 100%;
+				}
+
+					#resultados > section > div > property > p-header > img {
+						width: 100%;
+					}
+
+				#resultados > section > div > property > p-body {
+					display         : block;
+					background-color: #6d1100;
+					color           : white;
+					padding         : 10px;
+					font-weight     : 300;
+				}
+
+					#resultados > section > div > property > p-body > address {
+						display: block;
+						width  : 100%;
+					}
+
+					#resultados > section > div > property > p-body > mode {
+						display: block;
+						width  : 100%;
+					}
+
+					#resultados > section > div > property > p-body > price {
+						display        : flex;
+						align-items    : center;
+						flex-flow      : row wrap;
+						justify-content: space-between;
+						font-weight    : 700;
+					}
+
+						#resultados > section > div > property > p-body > price > ul {
+							list-style     : none;
+							display        : flex;
+							align-items    : center;
+							justify-content: center;
+						}
+
+							#resultados > section > div > property > p-body > price > ul > li {
+								font-weight : 300;
+								margin-right: 10px;
+							}
+
+							#resultados > section > div > property > p-body > price > ul > li:last-of-type {
+								margin-right: 0px;
+							}
+
+				#resultados > section > div > property > p-footer {
+					display        : flex;
+					align-items    : center;
+					flex-flow      : row wrap;
+					justify-content: space-between;
+					width          : 100%;
+					padding        : 20px 0px;
+					border-bottom  : 1px solid #6d1100;
+					font-weight    : 300;
+				}
+
+					#resultados > section > div > property > p-footer > address {
+						font-size: 0.85em;
+					}
+
+					#resultados > section > div > property > p-footer > a {
+						display         : inline-block;
+						padding         : 10px 15px;
+						color           : white;
+						background-color: #994c00;
+						border-radius   : 5px;
+						transition      : all 0.3s ease-out;
+						font-size       : 0.75em;
+						margin-left     : 10px;
+					}
+
+					#resultados > section > div > property > p-footer > a:hover {
+						background-color: #6d1100;
+					}
+
+#resultado {
+	width  : 100%;
+	padding: 180px 120px 80px 120px;
+}
+
+	#resultado > hgroup {
+		display      : block;
+		width        : 100%;
+		margin-bottom: 60px;
+	}
+
+		#resultado > hgroup > h1 {
+			font-size  : 1.25em;
+			font-weight: 700;
+		}
+
+		#resultado > hgroup > h2 {
+			font-weight: 300;
+			font-size  : 0.85em;
+		}
+
+	#resultado > section {
+		width          : 100%;
+		display        : flex;
+		flex-flow      : row wrap;
+		justify-content: space-between;
+	}
+
+		#resultado > section > div {
+			width: calc(50% - 15px);
+		}
+
+			#resultado > section > div > photos {
+				display: block;
+				width  : 100%;
+			}
+
+				#resultado > section > div > photos > div {
+					width        : 100%;
+					margin-bottom: 5px;
+				}
+
+					#resultado > section > div > photos > div > img {
+						width: 100%;
+					}
+
+				#resultado > section > div > photos > ul {
+					display        : flex;
+					flex-flow      : row wrap;
+					justify-content: space-between;
+					width          : 100%;
+					list-style     : none;
+				}
+
+					#resultado > section > div > photos > ul > li {
+						width: calc(33.33% - 3.75px);
+					}
+
+						#resultado > section > div > photos > ul > li > img {
+							width: 100%;
+						}
+
+			#resultado > section > div > detail {
+				display: block;
+				width  : 100%;
+			}
+
+				#resultado > section > div > detail > d-header {
+					display        : flex;
+					flex-flow      : row wrap;
+					justify-content: space-between;
+					align-items    : center;
+					width          : 100%;
+					margin-bottom  : 20px;
+					padding-bottom : 20px;
+					border-bottom  : 1px solid #eee;
+				}
+
+					#resultado > section > div > detail > d-header > div {
+						margin-right: 10px;
+					}
+
+						#resultado > section > div > detail > d-header > div > address {
+							display    : block;
+							width      : 100%;
+							font-style : normal;
+							font-weight: 300;
+						}
+
+						#resultado > section > div > detail > d-header > div > a {
+							display    : inline-block;
+							font-weight: 700;
+							color      : black;
+						}
+
+					#resultado > section > div > detail > d-header > ul {
+						list-style     : none;
+						display        : flex;
+						align-items    : center;
+						justify-content: center;
+					}
+
+						#resultado > section > div > detail > d-header > ul > li {
+							margin-right: 10px;
+						}
+
+						#resultado > section > div > detail > d-header > ul > li:last-of-type {
+							margin-right: 0px;
+						}
+
+				#resultado > section > div > detail > map {
+					display      : block;
+					width        : 100%;
+					height       : 200px;
+					margin-bottom: 20px;
+				}
+
+				#resultado > section > div > detail > p {
+					text-align   : justify;
+					margin-bottom: 20px;
+				}
+
+				#resultado > section > div > detail > info {
+					display        : flex;
+					flex-flow      : row wrap;
+					justify-content: space-between;
+					margin-bottom  : 20px;
+				}
+
+					#resultado > section > div > detail > info > ul {
+						list-style: none;
+						display   : block;
+						width     : calc(33.33% - 10px);
+					}
+
+						#resultado > section > div > detail > info > ul > span {
+							display      : block;
+							font-weight  : 700;
+							margin-bottom: 10px;
+						}
+
+						#resultado > section > div > detail > info > ul > li {
+							font-weight  : 300;
+							margin-bottom: 5px;
+						}
+
+						#resultado > section > div > detail > info > ul > li:last-of-type {
+							margin-bottom: 0px;
+						}
+
+				#resultado > section > div > detail > button {
+					display         : block;
+					width           : 100%;
+					padding         : 10px;
+					text-align      : center;
+					border-radius   : 5px;
+					color           : white;
+					font-weight     : 300;
+					font-size       : 0.85em;
+					background-color: #994c00;
+					border          : none;
+					text-transform  : uppercase;
+					transition      : all 0.3s ease-out;
+				}
+
+				#resultado > section > div > detail > button:hover {
+					background-color: #6d1100;
+				}
+
+	#resultado > form {
+		width          : 100%;
+		display        : flex;
+		flex-flow      : row wrap;
+		justify-content: space-between;
+		align-items    : center;
+		margin-top     : 40px;
+	}
+
+		#resultado > form > legend {
+			font-weight: 700;
+			display    : block;
+			width      : 100%;
+			font-size  : 1.25em;
+		}
+
+		#resultado > form > span {
+			width          : 100%;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: flex-start;
+			font-size      : 0.85em;
+			color          : #b8b8b8;
+			margin-bottom  : 20px;
+		}
+
+			#resultado > form > span > i {
+				font-style: normal;
+			}
+
+			#resultado > form > span > ul {
+				list-style     : none;
+				display        : flex;
+				flex-flow      : row wrap;
+				justify-content: flex-start;
+				margin-left    : 5px;
+			}
+
+				#resultado > form > span > ul > li {
+					margin-right: 2.5px;
+					cursor      : pointer;
+					transition  : all 0.3s ease-out;
+				}
+
+				#resultado > form > span > ul > li:hover {
+					color: black;
+				}
+
+				#resultado > form > span > ul > li:last-of-type {
+					margin-right: 0px;
+				}
+
+		#resultado > form > div {
+			width: calc(25% - 15px);
+		}
+
+			#resultado > form > div > input {
+				width           : 100%;
+				padding         : 10px;
+				border          : 1px solid #b8b8b8;
+				background-color: #eee;
+				font-weight     : 300;
+				border-radius   : 5px;
+				color           : black;
+			}
+
+			#resultado > form > div > input::placeholder {
+				color: #b8b8b8;
+			}
+
+			#resultado > form > div > button {
+				display         : block;
+				width           : 100%;
+				padding         : 10px;
+				background-color: #994c00;
+				color           : white;
+				border-radius   : 5px;
+				border          : none;
+				transition      : all 0.3s ease-out;
+			}
+
+			#resultado > form > div > button:hover {
+				background-color: #6d1100;
+			}
+
+	#resultado > property-group {
+		width          : 100%;
+		display        : flex;
+		flex-flow      : row wrap;
+		justify-content: space-between;
+		margin-top     : 40px;
+	}
+
+	#resultado > property-group > property {
+			display   : block;
+			width     : calc(33.33% - 20px);
+			margin-top: 40px;
+		}
+
+			#resultado > property-group > property > p-header {
+				width: 100%;
+			}
+
+				#resultado > property-group > property > p-header > img {
+					width: 100%;
+				}
+
+			#resultado > property-group > property > p-body {
+				display         : block;
+				background-color: #6d1100;
+				color           : white;
+				padding         : 10px;
+				font-weight     : 300;
+			}
+
+				#resultado > property-group > property > p-body > address {
+					display: block;
+					width  : 100%;
+				}
+
+				#resultado > property-group > property > p-body > mode {
+					display: block;
+					width  : 100%;
+				}
+
+				#resultado > property-group > property > p-body > price {
+					display        : flex;
+					align-items    : center;
+					flex-flow      : row wrap;
+					justify-content: space-between;
+					font-weight    : 700;
+				}
+
+					#resultado > property-group > property > p-body > price > ul {
+						list-style     : none;
+						display        : flex;
+						align-items    : center;
+						justify-content: center;
+					}
+
+						#resultado > property-group > property > p-body > price > ul > li {
+							font-weight : 300;
+							margin-right: 10px;
+						}
+
+						#resultado > property-group > property > p-body > price > ul > li:last-of-type {
+							margin-right: 0px;
+						}
+
+			#resultado > property-group > property > p-footer {
+				display        : flex;
+				align-items    : center;
+				flex-flow      : row wrap;
+				justify-content: space-between;
+				width          : 100%;
+				padding        : 20px 0px;
+				border-bottom  : 1px solid #6d1100;
+				font-weight    : 300;
+			}
+
+				#resultado > property-group > property > p-footer > address {
+					font-size: 0.85em;
+				}
+
+				#resultado > property-group > property > p-footer > a {
+					display         : inline-block;
+					padding         : 10px 15px;
+					color           : white;
+					background-color: #994c00;
+					border-radius   : 5px;
+					transition      : all 0.3s ease-out;
+					font-size       : 0.75em;
+					margin-left     : 10px;
+				}
+
+				#resultado > property-group > property > p-footer > a:hover {
+					background-color: #6d1100;
+				}
+
+/* Clases Extra */
+.wa {
+	position        : fixed;
+	width           : 60px;
+	height          : 60px;
+	border-radius   : 50%;
+	bottom          : 30px;
+	right           : 30px;
+	background-color: #09d261;
+	color           : white;
+	display         : flex;
+	align-items     : center;
+	justify-content : center;
+	transition      : all 0.3s ease-out;
+	font-size       : 25px;
+	z-index         : 110;
+}
+
+.wa:hover {
+	background-color: #1e814a;
+}
+
+.search {
+	position        : fixed;
+	width           : 60px;
+	height          : 60px;
+	border-radius   : 50%;
+	bottom          : 30px;
+	left            : 30px;
+	background-color: #6d1100;
+	color           : white;
+	display         : flex;
+	align-items     : center;
+	justify-content : center;
+	transition      : all 0.3s ease-out;
+	font-size       : 25px;
+}
+
+.search:hover {
+	background-color: #1e814a;
+}
+
 @media screen and (max-width: 1440px) {
 	body > nav {
 		padding: 0px 80px;
@@ -753,9 +1475,29 @@ body {
 	#faq {
 		padding: 80px;
 	}
+
+	#resultados {
+		padding: 180px 80px 80px 80px;
+	}
+
+	#resultado {
+		padding: 180px 80px 80px 80px;
+	}
+
+	.wa {
+		width    : 40px;
+		height   : 40px;
+		right    : 20px;
+		bottom   : 20px;
+		font-size: 16px;
+	}
 }
 
 @media all and (orientation: landscape) and (max-width: 1370px) {
+	responsive-nav {
+		display: flex;
+	}
+
 	body > button {
 		display: block;
 	}
@@ -834,6 +1576,30 @@ body {
 		#contacto > div {
 			width: 100%;
 		}
+
+	#formulario > div > form {
+		width: 50%;
+	}
+
+	#resultado {
+		padding: 140px 80px 80px 80px;
+	}
+
+		#resultado > section > div {
+			width: 100%;
+		}
+
+		#resultado > section > div:first-of-type {
+			margin-bottom: 40px;
+		}
+
+	#resultado > property-group > property {
+		width: 100%;
+	}
+
+	#resultado > property-group > property:first-of-type {
+		margin-top: 0px;
+	}
 }
 
 @media all and (orientation: landscape) and (max-width: 740px) {
@@ -847,8 +1613,8 @@ body {
 		}
 
 	body > button {
-		left: 20px;
-		top : 20px;
+		left: 80px;
+		top : 10px;
 	}
 
 	body > header {
@@ -867,13 +1633,38 @@ body {
 	#nosotros > div > div {
 		width: 100%;
 	}
+
+	#desarrollos > div > div > figure {
+		width     : 100%;
+		margin-top: 20px !important;
+	}
+
+	#desarrollos > div > div > figure:first-of-type {
+		margin-top: 0px !important;
+	}
+
+	#formulario {
+		overflow-y: auto;
+	}
+
+		#formulario > div {
+			padding: 20px;
+		}
+
+			#formulario > div > form {
+				width: 100%;
+			}
 }
 
 @media all and (orientation: portrait) and (max-width: 1030px) {
+	responsive-nav {
+		display: flex;
+	}
+
 	body > button {
 		display: block;
-		left   : 20px;
-		top    : 20px;
+		left   : 80px;
+		top    : 10px;
 	}
 
 	body > nav {
@@ -933,6 +1724,17 @@ body {
 			text-align: center;
 		}
 
+	#desarrollos > div > div > figure {
+		width     : calc(50% - 10px);
+		margin    : 0px;
+		margin-top: 20px !important;
+	}
+
+	#desarrollos > div > div > figure:nth-of-type(1),
+	#desarrollos > div > div > figure:nth-of-type(2) {
+		margin-top: 0px !important;
+	}
+
 	#servicios > div > figure {
 		width: 20%;
 	}
@@ -948,6 +1750,49 @@ body {
 		#contacto > div {
 			width: 100%;
 		}
+
+	#resultado {
+		padding: 140px 80px 80px 80px;
+	}
+
+		#resultado > section > div {
+			width: 100%;
+		}
+
+		#resultado > section > div:first-of-type {
+			margin-bottom: 40px;
+		}
+
+		#resultado > form > div {
+			width        : 100%;
+			margin-bottom: 10px;
+		}
+
+		#resultado > form > div:last-of-type {
+			margin-bottom: 0px;
+		}
+
+		#resultado > property-group > property {
+			width: 100%;
+		}
+
+		#resultado > property-group > property:first-of-type {
+			margin-top: 0px;
+		}
+
+	#resultados {
+		padding: 140px 80px 80px 80px;
+	}
+
+	#resultados > section > div > property {
+		width        : 100%;
+		margin-bottom: 40px !important;
+		margin-top   : 0px !important;
+	}
+
+	#resultados > section > div > property:last-of-type {
+		margin-bottom: 0px !important;
+	}
 }
 
 @media all and (orientation: portrait) and (max-width: 770px) {
@@ -978,6 +1823,14 @@ body {
 }
 
 @media all and (orientation: portrait) and (max-width: 420px) {
+	responsive-nav {
+		padding: 0px 20px;
+	}
+
+	body > button {
+		left: 20px;
+	}
+
 	body > header {
 		padding: 20px;
 	}
@@ -992,6 +1845,18 @@ body {
 
 		#descanso-1 > div > h2 {
 			font-size: 2em;
+		}
+
+	#desarrollos {
+		padding: 80px 20px;
+	}
+
+		#desarrollos > div > div > figure {
+			width: 100%;
+		}
+
+		#desarrollos > div > div > figure:nth-of-type(1) {
+			margin-bottom: 20px;
 		}
 
 	#servicios {
@@ -1059,5 +1924,57 @@ body {
 
 			#contacto > div > form {
 				width: 100%;
+			}
+
+	#formulario > div {
+		padding: 20px;
+	}
+
+		#formulario > div > form {
+			width: 100%;
+		}
+
+	#resultados {
+		padding: 80px 20px;
+	}
+
+		#resultados > div {
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+
+			#resultados > div > span {
+				width        : 100%;
+				margin-right : 0px;
+				margin-bottom: 5px;
+			}
+
+			#resultados > div > select {
+				width        : 100%;
+				margin-right : 0px;
+				margin-bottom: 5px;
+			}
+
+			#resultados > div > ul {
+				width       : 100%;
+				margin-right: 0px;
+			}
+
+	#resultado {
+		padding: 100px 20px 40px 20px;
+	}
+
+		#resultado > hgroup {
+			margin-bottom: 40px;
+		}
+
+			#resultado > section > div > detail > info > ul {
+				width        : 100%;
+				margin-bottom: 20px;
+				text-align   : center;
+			}
+
+			#resultado > section > div > detail > info > ul:last-of-type {
+				margin-bottom: 0px;
 			}
 }

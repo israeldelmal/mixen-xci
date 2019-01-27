@@ -2,39 +2,7 @@
 	<?php include 'menu.html'; ?>
 	<!-- Cabecera -->
 	<header id="inicio" data-parallax="scroll" data-image-src="assets/images/cabecera/fondo.jpg">
-		<form action="#">
-			<div>
-				<label>¿Qué estás buscando?</label>
-				<select>
-					<option selected disabled>Ejemplo: Departamento</option>
-					<option>Opción #1</option>
-					<option>Opción #2</option>
-					<option>Opción #3</option>
-					<option>Opción #4</option>
-				</select>
-			</div>
-			<div>
-				<label>¿Cuáles son sus necesidades?</label>
-				<select>
-					<option selected disabled>Ejemplo: Venta</option>
-					<option>Opción #1</option>
-					<option>Opción #2</option>
-					<option>Opción #3</option>
-				</select>
-				<input placeholder="Ciudad" autocomplete="off">
-				<input placeholder="Superficie (m²)" autocomplete="off">
-				<input placeholder="Presupuesto" autocomplete="off">
-				<select>
-					<option selected disabled>Equipamento</option>
-					<option>Opción #1</option>
-					<option>Opción #2</option>
-					<option>Opción #3</option>
-				</select>
-			</div>
-			<div>
-				<button type="submit">Consultar</button>
-			</div>
-		</form>
+		<img src="assets/images/logo.png" alt="XCI Inmobiliaria | Logotipo">
 	</header>
 	<!-- Nosotros -->
 	<section id="nosotros" data-parallax="scroll" data-image-src="assets/images/nosotros/fondo.jpg">
@@ -92,15 +60,188 @@
 		</div>
 	</section>
 	<!-- Desarrollos -->
-	<section id="desarrollos" data-parallax="scroll" data-image-src="assets/images/desarrollos/fondo.jpg">
+	<main id="desarrollos" data-parallax="scroll" data-image-src="assets/images/desarrollos/fondo.jpg">
 		<h1>Conoce los Desarrollos</h1>
 		<ul>
-			<li><a href="#" class="active">Casa</a></li>
-			<li><a href="#">Departamento</a></li>
-			<li><a href="#">Terreno</a></li>
+			<li><a data-property="#Inmuebles-1" href="#" class="active">Casa</a></li>
+			<li><a data-property="#Inmuebles-2" href="#">Departamento</a></li>
+			<li><a data-property="#Inmuebles-3" href="#">Terreno</a></li>
 		</ul>
-		<div></div>
-	</section>
+		<div id="Inmuebles-1">
+			<div>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div id="Inmuebles-2">
+			<div>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura-2.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura-2.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura-2.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura-2.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura-2.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura-2.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div id="Inmuebles-3">
+			<div>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura-3.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura-3.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura-3.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura-3.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura-3.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+				<figure>
+					<a href="#">
+						<span>Renta</span>
+						<img src="assets/images/desarrollos/figura-3.jpg" alt="#">
+						<div><i class="fas fa-plus"></i></div>
+					</a>
+					<address>Dirección, #12345</address>
+					<figcaption>Precio $12,345</figcaption>
+				</figure>
+			</div>
+		</div>
+	</main>
 	<!-- FAQ -->
 	<section id="faq">
 		<h1>Preguntas Frecuentes</h1>
@@ -151,4 +292,6 @@
 			</ul>
 		</div>
 	</section>
+	<a href="#" target="_blank" class="wa"><i class="fab fa-whatsapp"></i></a>
+	<?php include 'form.html'; ?>
 <?php include 'footer.html'; ?>

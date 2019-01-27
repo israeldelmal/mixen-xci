@@ -1,7 +1,19 @@
 // Formulario
+$('body > nav > span > a:first-of-type').on('click', function(event) {
+	event.preventDefault();
+	$('#formulario').fadeIn(300);
+	$('body').css('overflow', 'hidden');
+});
+
 $('body > nav > span > a:last-of-type').on('click', function(event) {
 	event.preventDefault();
 	$('body > nav > span').fadeOut('fast');
+});
+
+$('#formulario > a').on('click', function(event) {
+	event.preventDefault();
+	$('#formulario').fadeOut(300);
+	$('body').css('overflow', 'visible');
 });
 
 // Clases en navegación
@@ -12,10 +24,6 @@ $(window).scroll(function() {
 		} else {
 			$('nav').removeClass('nav-white');
 		}
-	}
-
-	if ($('body > nav > span').is(':visible')) {
-		$('body > nav > span').fadeOut('fast');
 	}
 });
 
@@ -62,4 +70,17 @@ $('#faq > div > ul > li > a').on('click', function(event) {
 		$(ID).find('i').addClass('i-rotate');
 		$(ID).addClass('active');
 	}
+});
+
+// Desarrollos
+$('#desarrollos > ul > li > a').on('click', function(event) {
+	event.preventDefault();
+
+	let ID = $(this).attr('data-property');
+
+	$('#desarrollos > div').fadeOut(300);
+	$('#desarrollos > ul > li > a').removeClass('active');
+
+	$(this).addClass('active');
+	$(ID).fadeIn(600);
 });
