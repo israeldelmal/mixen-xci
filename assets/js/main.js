@@ -16,6 +16,25 @@ $('#formulario > a').on('click', function(event) {
 	$('body').css('overflow', 'visible');
 });
 
+$('responsive-nav > button').on('click', function(event) {
+	event.preventDefault();
+	$('#formulario').fadeOut(300);
+});
+
+$(function() {
+	$(window).scroll(function(){
+		var windowHeight = $(window).scrollTop();
+		var altura       = $('.altura').offset();
+		altura           = altura.top;
+
+	    if (windowHeight >= altura) {
+			$('body > nav > span').addClass('span-active');
+	    } else {
+			$('body > nav > span').removeClass('span-active');
+		}
+	});
+});
+
 // Clases en navegación
 $(window).scroll(function() {
 	if ($(window).width() > 1370) {
@@ -83,4 +102,13 @@ $('#desarrollos > ul > li > a').on('click', function(event) {
 
 	$(this).addClass('active');
 	$(ID).fadeIn(600);
+});
+
+// Resultado
+$('#resultado > section > div > photos > ul > li > img').on('click', function(event) {
+	event.preventDefault();
+
+	let IMG = $(this).attr('src');
+
+	$('#resultado > section > div > photos > div > img').attr('src', IMG);
 });

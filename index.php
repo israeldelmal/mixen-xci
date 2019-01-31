@@ -2,10 +2,42 @@
 	<?php include 'menu.html'; ?>
 	<!-- Cabecera -->
 	<header id="inicio" data-parallax="scroll" data-image-src="assets/images/cabecera/fondo.jpg">
-		<img src="assets/images/logo.png" alt="XCI Inmobiliaria | Logotipo">
+		<form action="#">
+			<div>
+				<label>¿Qué estás buscando?</label>
+				<select>
+					<option selected disabled>Ejemplo: Departamento</option>
+					<option>Opción #1</option>
+					<option>Opción #2</option>
+					<option>Opción #3</option>
+					<option>Opción #4</option>
+				</select>
+			</div>
+			<div>
+				<label>¿Cuáles son sus necesidades?</label>
+				<select>
+					<option selected disabled>Ejemplo: Venta</option>
+					<option>Opción #1</option>
+					<option>Opción #2</option>
+					<option>Opción #3</option>
+				</select>
+				<input placeholder="Ciudad" autocomplete="off">
+				<input placeholder="Superficie (m²)" autocomplete="off">
+				<input placeholder="Presupuesto" autocomplete="off">
+				<select>
+					<option selected disabled>Equipamento</option>
+					<option>Opción #1</option>
+					<option>Opción #2</option>
+					<option>Opción #3</option>
+				</select>
+			</div>
+			<div>
+				<button type="submit">Consultar</button>
+			</div>
+		</form>
 	</header>
 	<!-- Nosotros -->
-	<section id="nosotros" data-parallax="scroll" data-image-src="assets/images/nosotros/fondo.jpg">
+	<section id="nosotros" class="altura" data-parallax="scroll" data-image-src="assets/images/nosotros/fondo.jpg">
 		<h1>Acerca de Nosotros</h1>
 		<div>
 			<img src="assets/images/nosotros/figura.jpg" alt="Acerca de Nosotros, imagen representativa">
@@ -15,7 +47,9 @@
 				la mejor atención y claro, los mejores resultados, para que te sientas con la total 
 				confianza de recomendar o volver a usar nuestros servicios. 
 				¡Será un placer atenderte!</p>
-				<a href="#">Escríbenos ¡Nosotros te ayudamos! <i class="fab fa-whatsapp"></i></a>
+				<div>
+					<a href="#">Escríbenos ¡Nosotros te ayudamos! <i class="fab fa-whatsapp"></i></a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -34,29 +68,33 @@
 		<h1>Nuestros Servicios</h1>
 		<sub>Contamos con diversos servicios adecuados a tus necesidades en la búsqueda de propiedad o procesos de venta.</sub>
 		<div>
-			<figure>
-				<a href="#"><img src="assets/images/servicios/iconos/1.png"></a>
-				<figcaption>Vende</figcaption>
-				<p>Te ayudamos a poner tu propiedad en el mercado.</p>
-			</figure>
-			<figure>
-				<a href="#"><img src="assets/images/servicios/iconos/2.png"></a>
-				<figcaption>Renta</figcaption>
-				<p>Encuentra el lugar perfecto adecuado a tus necesidades.</p>
-			</figure>
-			<figure>
-				<img src="assets/images/servicios/figura-principal.png">
-			</figure>
-			<figure>
-				<a href="#"><img src="assets/images/servicios/iconos/2.png"></a>
-				<figcaption>Renta</figcaption>
-				<p>Encuentra el lugar perfecto adecuado a tus necesidades.</p>
-			</figure>
-			<figure>
-				<a href="#"><img src="assets/images/servicios/iconos/3.png"></a>
-				<figcaption>Gestión</figcaption>
-				<p>Te apoyamos en el proceso de documentación para tu venta o renta.</p>
-			</figure>
+			<div>
+				<figure>
+					<a href="#"><img src="assets/images/servicios/iconos/1.png"></a>
+					<figcaption>Vende</figcaption>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</figure>
+				<figure>
+					<img src="assets/images/servicios/figura-principal.png">
+				</figure>
+				<figure>
+					<a href="#"><img src="assets/images/servicios/iconos/2.png"></a>
+					<figcaption>Renta</figcaption>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</figure>
+			</div>
+			<div>
+				<figure>
+					<a href="#"><img src="assets/images/servicios/iconos/2.png"></a>
+					<figcaption>Renta</figcaption>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</figure>
+				<figure>
+					<a href="#"><img src="assets/images/servicios/iconos/3.png"></a>
+					<figcaption>Gestión</figcaption>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</figure>
+			</div>
 		</div>
 	</section>
 	<!-- Desarrollos -->

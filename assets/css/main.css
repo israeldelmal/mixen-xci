@@ -27,8 +27,7 @@ body {
 
 	responsive-nav {
 		display         : none;
-		flex-flow       : row wrap;
-		justify-content : flex-end;
+		justify-content : center;
 		align-items     : center;
 		height          : 60px;
 		width           : 100%;
@@ -42,13 +41,28 @@ body {
 	}
 
 		responsive-nav > a {
-			display: block;
-			height : 50px;
+			display : block;
+			height  : 50px;
+			position: absolute;
+			left    : 80px;
 		}
 
 			responsive-nav > a > img {
 				height: 100%;
 			}
+
+		responsive-nav > button {
+			width           : 40px;
+			height          : 40px;
+			background-color: #6d1100;
+			display         : flex;
+			align-items     : center;
+			justify-content : center;
+			color           : white;
+			border-radius   : 50%;
+			border          : none;
+			position        : absolute;
+		}
 
 	body > button {
 		display         : none;
@@ -56,11 +70,11 @@ body {
 		height          : 40px;
 		position        : fixed;
 		top             : 10px;
-		left            : 80px;
+		right           : 80px;
 		border          : none;
-		background-color: #994c00;
 		padding         : 5px;
 		z-index         : 110;
+		background-color: transparent;
 	}
 
 		body > button > span {
@@ -68,7 +82,7 @@ body {
 			width           : 100%;
 			height          : 1px;
 			margin-bottom   : 5px;
-			background-color: white;
+			background-color: #994c00;
 			transition      : all 0.3s ease-out;
 		}
 
@@ -171,12 +185,18 @@ body {
 			align-items     : center;
 			justify-content : center;
 			width           : 100%;
-			height          : 30px;
+			height          : 0px;
 			background-color: #6d1100;
 			font-weight     : 300;
 			position        : absolute;
-			bottom          : -30px;
+			top             : 80px;
 			left            : 0px;
+			overflow        : hidden;
+			transition      : all 0.3s ease-out;
+		}
+
+		body > nav > .span-active {
+			height: 60px !important;
 		}
 
 			body > nav > span > a {
@@ -184,7 +204,7 @@ body {
 				color         : white;
 				font-weight   : 300;
 				text-transform: uppercase;
-				font-size     : 0.75em;
+				font-size     : 1em;
 			}
 
 			body > nav > span > a:last-of-type {
@@ -302,16 +322,74 @@ body {
 				}
 
 	body > header {
-		width          : 100%;
-		height         : 100vh;
-		display        : flex;
-		align-items    : center;
-		justify-content: center;
+		width      : 100%;
+		height     : 100vh;
+		display    : flex;
+		align-items: center;
 	}
 
-		body > header > img {
-			width: 300px;
+		body > header > form {
+			width           : 30%;
+			border-radius   : 10px;
+			background-color: #ececec;
+			padding         : 20px;
+			position        : absolute;
+			right           : 120px;
 		}
+
+			body > header > form > div {
+				width        : 100%;
+				margin-bottom: 15px;
+			}
+
+			body > header > form > div:last-of-type {
+				margin-bottom: 0px;
+			}
+
+				body > header > form > div > label {
+					display      : block;
+					width        : 100%;
+					margin-bottom: 5px;
+					color        : black;
+					font-weight  : 700;
+					font-size    : 0.75em;
+				}
+
+				body > header > form > div > input,
+				body > header > form > div > select {
+					width           : 100%;
+					background-color: #e5e5e5;
+					border          : none;
+					padding         : 10px;
+					color           : black
+					border-radius   : 15px;
+					margin-bottom   : 10px;
+					font-weight     : 300;
+					color           : black;
+				}
+
+				body > header > form > div > select:last-of-type {
+					margin-bottom: 0px;
+				}
+
+				body > header > form > div > button {
+					display         : block;
+					width           : 100%;
+					font-weight     : 300;
+					color           : white;
+					border-radius   : 5px;
+					border          : none;
+					background-color: #994c00;
+					text-align      : center;
+					padding         : 10px;
+					text-transform  : uppercase;
+					font-size       : 0.85em;
+					transition      : all 0.3s ease-out;
+				}
+
+				body > header > form > div > button:hover {
+					background-color: #6d1100;
+				}
 
 #nosotros {
 	width  : 100%;
@@ -362,19 +440,26 @@ body {
 				margin-bottom: 20px;
 			}
 
-			#nosotros > div > div > a {
-				display    : inline-block;
-				color      : white;
-				padding    : 10px;
-				font-size  : 0.85em;
-				font-weight: 400;
-				border     : 1px solid white;
+			#nosotros > div > div > div {
+				width          : 100%;
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
 			}
 
-				#nosotros > div > div > a > i {
-					font-size  : 1.5em;
-					margin-left: 10px;
+				#nosotros > div > div > div > a {
+					display    : inline-block;
+					color      : white;
+					padding    : 10px;
+					font-size  : 0.85em;
+					font-weight: 400;
+					border     : 1px solid white;
 				}
+
+					#nosotros > div > div > div > a > i {
+						font-size  : 1.5em;
+						margin-left: 10px;
+					}
 
 #descanso-1 {
 	width           : 100%;
@@ -470,58 +555,71 @@ body {
 	}
 
 	#servicios > div {
-		width          : 100%;
-		display        : flex;
-		flex-flow      : row wrap;
-		justify-content: space-between;
-		align-items    : flex-end;
+		width: 100%;
 	}
 
-		#servicios > div > figure {
+		#servicios > div > div {
+			width          : 100%;
 			display        : flex;
-			align-items    : center;
+			flex-flow      : row wrap;
 			justify-content: center;
-			flex-direction : column;
-			width          : calc(16.6% - 10px);
+			align-items    : flex-end;
 		}
 
-			#servicios > div > figure > a {
-				width           : 35%;
-				display         : inline-block;
-				border-radius   : 50%;
-				margin-bottom   : 10px;
-				background-color: #9e550d;
-				transition      : all 0.3s ease-out;
+		#servicios > div > div:first-of-type {
+			margin-bottom: 40px;
+		}
+
+			#servicios > div > div > figure {
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+				flex-direction : column;
+				width          : calc(16.6% - 10px);
+				margin-right   : 20px;
 			}
 
-			#servicios > div > figure > a:hover {
-				background-color: #6d1100;
+			#servicios > div > div > figure:last-of-type {
+				margin-right: 0px;
 			}
 
-				#servicios > div > figure > a > img {
-					width: 100%;
+				#servicios > div > div > figure > a {
+					width           : 35%;
+					display         : inline-block;
+					border-radius   : 50%;
+					margin-bottom   : 10px;
+					background-color: #9e550d;
+					transition      : all 0.3s ease-out;
 				}
 
-			#servicios > div > figure > figcaption {
-				text-align    : center;
-				font-size     : 1.1em;
-				text-transform: uppercase;
-				font-weight   : 400;
-				margin-bottom : 10px;
+				#servicios > div > div > figure > a:hover {
+					background-color: #6d1100;
+				}
+
+					#servicios > div > div > figure > a > img {
+						width: 100%;
+					}
+
+				#servicios > div > div > figure > figcaption {
+					text-align    : center;
+					font-size     : 1.1em;
+					text-transform: uppercase;
+					font-weight   : 400;
+					margin-bottom : 10px;
+				}
+
+				#servicios > div > div > figure > p {
+					text-align : center;
+					font-weight: 300;
+				}
+
+			#servicios > div > div:first-of-type > figure:nth-of-type(2) {
+				width: calc(30% - 10px);
 			}
 
-			#servicios > div > figure > p {
-				text-align : center;
-				font-weight: 300;
-			}
-
-		#servicios > div > figure:nth-of-type(3) {
-			width: calc(30% - 10px);
-		}
-
-			#servicios > div > figure:nth-of-type(3) > img {
-				width: 100%;
-			}
+				#servicios > div > div:first-of-type > figure:nth-of-type(2) > img {
+					width: 100%;
+				}
 
 #desarrollos {
 	width  : 100%;
@@ -1112,7 +1210,8 @@ body {
 					}
 
 						#resultado > section > div > photos > ul > li > img {
-							width: 100%;
+							width : 100%;
+							cursor: pointer;
 						}
 
 			#resultado > section > div > detail {
@@ -1315,10 +1414,26 @@ body {
 		margin-top     : 40px;
 	}
 
+	#resultado > property-group > h2 {
+		display        : block;
+		width          : 100%;
+		font-family    : 'Yeseva One', cursive;
+		font-size      : 2em;
+		color          : white;
+		margin-bottom  : 30px;
+		padding-bottom : 10px;
+		text-align     : center;
+		position       : relative;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+		color          : black;
+		border-bottom  : 1px solid black;
+	}
+
 	#resultado > property-group > property {
-			display   : block;
-			width     : calc(33.33% - 20px);
-			margin-top: 40px;
+			display: block;
+			width  : calc(33.33% - 20px);
 		}
 
 			#resultado > property-group > property > p-header {
@@ -1561,13 +1676,13 @@ body {
 		margin-bottom: 40px;
 	}
 
-		#servicios > div > figure {
-			width: 20%;
+		#servicios > div > div > figure {
+			width: 30%;
 		}
 
-		#servicios > div > figure:nth-of-type(3) {
-			display: none;
-		}
+			#servicios > div > div > figure > a {
+				width: 25%;
+			}
 
 	#contacto {
 		padding: 80px;
@@ -1613,8 +1728,8 @@ body {
 		}
 
 	body > button {
-		left: 80px;
-		top : 10px;
+		right: 80px;
+		top  : 10px;
 	}
 
 	body > header {
@@ -1625,6 +1740,14 @@ body {
 		body > header > form {
 			width: 100%;
 		}
+
+	#servicios > div > div > figure {
+		width: 45%;
+	}
+
+	#servicios > div > div:first-of-type > figure:nth-of-type(2) {
+		display: none;
+	}
 
 	#nosotros > div > img {
 		display: none;
@@ -1663,7 +1786,7 @@ body {
 
 	body > button {
 		display: block;
-		left   : 80px;
+		right  : 80px;
 		top    : 10px;
 	}
 
@@ -1735,12 +1858,8 @@ body {
 		margin-top: 0px !important;
 	}
 
-	#servicios > div > figure {
-		width: 20%;
-	}
-
-	#servicios > div > figure:nth-of-type(3) {
-		display: none;
+	#servicios > div > div > figure {
+		width: 30%;
 	}
 
 	#contacto {
@@ -1827,8 +1946,27 @@ body {
 		padding: 0px 20px;
 	}
 
+		responsive-nav > a {
+			left: 20px;
+		}
+
+	body > nav {
+		position: fixed;
+	}
+
+		body > nav > span {
+			position : fixed;
+			z-index  : 120;
+			top      : 60px;
+			font-size: 0.85em;
+		}
+
+			body > nav > span > a:last-of-type {
+				right: 20px;
+			}
+
 	body > button {
-		left: 20px;
+		right: 20px;
 	}
 
 	body > header {
@@ -1863,25 +2001,33 @@ body {
 		padding: 80px 20px;
 	}
 
-		#servicios > sub {
-			margin-bottom: 40px;
+		#servicios > div > div {
+			flex-flow     : row nowrap;
+			align-items   : center;
+			flex-direction: column;
+			margin-bottom : 20px;
 		}
 
-		#servicios > div {
-			flex-flow      : row nowrap;
-			align-items    : center;
-			justify-content: center;
-			flex-direction : column;
+		#servicios > div > div:first-of-type {
+			margin-bottom: 20px;
 		}
 
-			#servicios > div > figure {
-				width        : 50%;
+			#servicios > div > div > figure {
+				width       : 100%;
+				margin-right: 0px;
+			}
+
+			#servicios > div > div > figure:first-of-type {
 				margin-bottom: 20px;
 			}
 
-			#servicios > div > figure:last-of-type {
-				margin-bottom: 0px;
+			#servicios > div > div:first-of-type > figure:nth-of-type(2) {
+				display: none;
 			}
+
+				#servicios > div > div > figure > a {
+					width: 25%;
+				}
 
 	#faq {
 		padding: 80px 20px;

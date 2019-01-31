@@ -1,7 +1,7 @@
 <?php include 'header.html'; ?>
 	<?php include 'menu.html'; ?>
 	<!-- Resultado -->
-	<div id="resultado">
+	<div id="resultado" class="altura">
 		<hgroup>
 			<h1>Residencial, fraccionamiento.</h1>
 			<h2>Modo: <strong>Renta</strong></h2>
@@ -93,6 +93,7 @@
 			</div>
 		</form>
 		<property-group>
+			<h2>Relacionados</h2>
 			<property>
 				<p-header>
 					<img src="assets/images/desarrollos/figura.jpg" alt="#">
